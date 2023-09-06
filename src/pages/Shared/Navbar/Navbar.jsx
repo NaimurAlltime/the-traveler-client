@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <header className="max-w-screen-xl mx-auto flex flex-wrap md:justify-start md:flex-nowrap w-full text-md">
       <nav
-        className="relative w-full bg-white md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-gray-800 dark:border-gray-700"
+        className="relative w-full bg-white md:flex md:items-center md:justify-between md:py-0 sm:p-2 lg:p-0 xl:mx-auto dark:bg-gray-800 dark:border-gray-700"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">

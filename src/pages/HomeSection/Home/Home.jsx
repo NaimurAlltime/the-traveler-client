@@ -1,7 +1,11 @@
+import Banner from "../Banner/Banner";
+import Categories from "../Categories/Categories";
+
 const Home = () => {
   return (
-    <div className="w-full h-96 bg-sky-200-900">
-      <h2>this is home page</h2>
+    <div>
+      <Banner></Banner>
+      <Categories></Categories>
     </div>
   );
 };
