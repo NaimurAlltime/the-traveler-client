@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Beachcomber",
+    "image": "https://img.freepik.com/premium-photo/egypt-red-sea-wreck-sunken-ship-scuba-diver_857279-12585.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais",
+    "price": "4,500",
+    "startDate": "15 JUN 2023",
+    "endDate": "15 AUG 2023"
+  },
+  {
+    "id": 2,
+    "title": "The Meridian",
+    "image": "https://img.freepik.com/premium-photo/popular-resort-amara-dolce-vita-luxury-hotel_146671-19422.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais",
+    "price": "6,500",
+    "startDate": "05 APRIL 2023",
+    "endDate": "25 JUN 2023"
+  },
+  {
+    "id": 3,
+    "title": "Seven Mile Beach",
+    "image": "https://img.freepik.com/premium-photo/luxury_943124-45.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais",
+    "price": "4,900",
+    "startDate": "21 JULY 2023",
+    "endDate": "13 AUG 2023"
+  },
+  {
+    "id": 4,
+    "title": "The Kitiwake Dive",
+    "image": "https://img.freepik.com/premium-photo/egypt-red-sea-wreck-sunken-ship-scuba-diver_857279-12585.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais",
+    "price": "6,300",
+    "startDate": "15 JUN 2023",
+    "endDate": "15 AUG 2023"
+  },
+  {
+    "id": 5,
+    "title": "The Kitiwake Dive",
+    "image": "https://img.freepik.com/free-photo/white-hammocks-with-umbrellas_1203-2074.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais",
+    "price": "6,700",
+    "startDate": "15 JUN 2023",
+    "endDate": "15 AUG 2023"
+  }
+]
