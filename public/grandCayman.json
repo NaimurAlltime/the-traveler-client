@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Turtle Farm",
+    "image": "https://img.freepik.com/premium-photo/hawksbill-sea-turtle-eretmochelys-imbricata-eating-top-reef_242170-21.jpg?w=900"
+  },
+  {
+    "id": 2,
+    "title": "Stingray City",
+    "image": "https://img.freepik.com/free-photo/medium-shot-couple-pointing-town_23-2148966558.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
+  },
+  {
+    "id": 3,
+    "title": "Kite Boarding",
+    "image": "https://img.freepik.com/premium-photo/people-ride-banana-boat-bright-blue-sea-clear-sky-happy-vacation_434420-1492.jpg?w=900"
+  },
+  {
+    "id": 4,
+    "title": "Seven Mile Beach",
+    "image": "https://img.freepik.com/premium-photo/portrait-happy-family-summer-vacation-beach_530697-70716.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
+  },
+  {
+    "id": 5,
+    "title": "Rock Climbing",
+    "image": "https://img.freepik.com/premium-photo/friendly-hand-hike_1426-20688.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
+  },
+  {
+    "id": 6,
+    "title": "Sister Islands",
+    "image": "https://img.freepik.com/premium-photo/beautiful-family-summer-vacation_109800-6641.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
+  }
+]

@@ -31,7 +31,7 @@ const PopularPackages = () => {
     <div>
       {/* <!-- Title --> */}
       <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-12">
-        <h2 className="text-2xl font-normal md:text-4xl md:leading-tight dark:text-white">
+        <h2 className="text-2xl font-normal md:text-3xl md:leading-tight dark:text-white">
           Most Popular <span className="font-semibold">Packages</span>
         </h2>
         <p className="mt-1 text-gray-600 dark:text-gray-400">
