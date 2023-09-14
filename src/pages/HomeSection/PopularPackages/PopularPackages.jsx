@@ -40,8 +40,8 @@ const PopularPackages = () => {
         </p>
       </div>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={1} // Set the initial number of slides to show on mobile
+        spaceBetween={10} // Set the space between slides
         freeMode={true}
         hashNavigation={{
           watchState: true,
@@ -52,6 +52,17 @@ const PopularPackages = () => {
         navigation={true}
         modules={[FreeMode, Pagination, Navigation, HashNavigation]}
         className="mySwiper max-w-screen-xl mx-auto"
+        breakpoints={{
+          // Add breakpoints for larger screen sizes
+          640: {
+            slidesPerView: 2, // Number of slides to show on screens wider than 640px
+            spaceBetween: 20, // Space between slides on screens wider than 640px
+          },
+          1024: {
+            slidesPerView: 3, // Number of slides to show on screens wider than 1024px
+            spaceBetween: 30, // Space between slides on screens wider than 1024px
+          },
+        }}
       >
         <div className="max-w-screen-xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {packages.map((item) => (

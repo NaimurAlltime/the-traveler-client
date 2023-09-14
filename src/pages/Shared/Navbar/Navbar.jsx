@@ -1,4 +1,26 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../../providers/AuthProvider";
+
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "LogOut successful!.",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <header className="max-w-screen-xl mx-auto flex flex-wrap md:justify-start md:flex-nowrap w-full text-md">
       <nav
@@ -6,9 +28,9 @@ const Navbar = () => {
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
-          <a
+          <Link
+            to="/"
             className="flex-none text-xl font-semibold dark:text-white"
-            href="#"
             aria-label="Brand"
           >
             <div className="lg:flex justify-center items-center">
@@ -17,7 +39,7 @@ const Navbar = () => {
                 The Traveler
               </h3>
             </div>
-          </a>
+          </Link>
           <div className="md:hidden">
             <button
               type="button"
@@ -55,13 +77,13 @@ const Navbar = () => {
           className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
         >
           <div className="flex flex-col text-lg gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-            <a
+            <Link
+              to="/"
               className="font-medium text-blue-600 md:py-6 dark:text-blue-500"
-              href="#"
               aria-current="page"
             >
               Home
-            </a>
+            </Link>
             <a
               className="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#"
@@ -81,7 +103,7 @@ const Navbar = () => {
               Blog
             </a>
 
-            <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
+            {/* <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
               <button
                 type="button"
                 className="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 "
@@ -169,24 +191,80 @@ const Navbar = () => {
                   Team Account
                 </a>
               </div>
-            </div>
+            </div> */}
+            {user ? (
+              <>
+                <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-2">
+                  <button
+                    type="button"
+                    className="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500 "
+                  >
+                    <img
+                      data-tooltip-id="user-name"
+                      // data-tooltip-content={user.displayName}
+                      style={{ width: "58px", height: "56px" }}
+                      src={user.photoURL}
+                      className="rounded-full border-2 border-gray-200 p-1 object-cover"
+                    />
+                    <svg
+                      className="ml-2 w-2.5 h-2.5 text-gray-600"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      ></path>
+                    </svg>
+                  </button>
 
-            <a
-              className="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
-              href="#"
-            >
-              <svg
-                className="w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
+                  <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2 dark:bg-gray-800 md:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
+                    <a
+                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      About
+                    </a>
+                    <a
+                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      href="#"
+                    >
+                      Dashboard
+                    </a>
+                    <button
+                      onClick={handleLogOut}
+                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                    >
+                      Log Out
+                    </button>
+                  </div>
+                </div>
+
+                {/* <Tooltip id="user-name" /> */}
+              </>
+            ) : (
+              <Link
+                to="/login"
+                className="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 md:border-l md:border-gray-300 md:my-6 md:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
               >
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-              </svg>
-              Log in
-            </a>
+                <svg
+                  className="w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+                Log in
+              </Link>
+            )}
           </div>
         </div>
       </nav>

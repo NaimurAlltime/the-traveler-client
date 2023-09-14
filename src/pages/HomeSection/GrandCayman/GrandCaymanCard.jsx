@@ -5,7 +5,7 @@ const GrandCaymanCard = ({ item }) => {
   return (
     // <!-- Card -->
     <div
-      className="group hover:bg-gray-100 rounded-xl transition-all dark:hover:bg-white/[.05]"
+      className="group hover:bg-gray-100 lg:p-0 p-2 rounded-xl transition-all dark:hover:bg-white/[.05]"
       href="#"
     >
       <div className="aspect-w-16 aspect-h-10">
