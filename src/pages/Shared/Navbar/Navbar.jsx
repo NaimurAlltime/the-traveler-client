@@ -1,4 +1,7 @@
 import { useContext } from "react";
+import { AiFillDashboard } from "react-icons/ai";
+import { BiLogOut } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -22,9 +25,9 @@ const Navbar = () => {
   };
 
   return (
-    <header className="max-w-screen-xl mx-auto flex flex-wrap md:justify-start md:flex-nowrap w-full text-md">
+    <header className="sticky top-0 z-10 bg-white drop-shadow-1 flex flex-wrap md:justify-start md:flex-nowrap w-full text-md">
       <nav
-        className="relative w-full bg-white md:flex md:items-center md:justify-between md:py-0 sm:p-2 lg:p-0 xl:mx-auto dark:bg-gray-800 dark:border-gray-700"
+        className="max-w-screen-xl mx-auto  relative w-full bg-white md:flex md:items-center md:justify-between md:py-0 sm:p-2 lg:p-0 xl:mx-auto dark:bg-gray-800 dark:border-gray-700"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -224,22 +227,31 @@ const Navbar = () => {
                   </button>
 
                   <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2 dark:bg-gray-800 md:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
-                    <a
-                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      About
-                    </a>
-                    <a
-                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      Dashboard
-                    </a>
+                    <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-4 dark:border-strokedark">
+                      <li>
+                        <Link
+                          to="/profile"
+                          className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+                        >
+                          <CgProfile className="text-2xl" />
+                          My Profile
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/profile"
+                          className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+                        >
+                          <AiFillDashboard className="text-2xl" />
+                          Dashboard
+                        </Link>
+                      </li>
+                    </ul>
                     <button
                       onClick={handleLogOut}
-                      className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                      className="flex items-center gap-3.5 py-4 px-6 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
                     >
+                      <BiLogOut className="text-2xl" />
                       Log Out
                     </button>
                   </div>

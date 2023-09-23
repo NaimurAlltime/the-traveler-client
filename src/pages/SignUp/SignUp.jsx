@@ -4,14 +4,11 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { initTE, Input, Ripple } from "tw-elements";
-import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../providers/AuthProvider";
 
 initTE({ Input, Ripple });
 
 const SignUp = () => {
-  useTitle("Sign Up");
-
   const { createUser, googleSignIn, updateUserProfile, logOut } =
     useContext(AuthContext);
   const [error, setError] = useState("");

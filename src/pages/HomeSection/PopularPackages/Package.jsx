@@ -7,15 +7,18 @@ const Package = ({ item }) => {
   // Define three different color classes for the price text
   const priceColorClasses = [
     "text-blue-500",
-    "text-yellow-500",
+    "text-pink-500",
+    "text-green-500",
     "text-pink-500",
     "text-green-500",
     "text-yellow-500",
+    "text-pink-500",
     "text-blue-500",
     "text-pink-500",
     "text-yellow-500",
     "text-pink-500",
     "text-green-500",
+    "text-pink-500",
     "text-cyan-500",
     "text-yellow-500",
     "text-pink-500",
@@ -65,7 +68,7 @@ const Package = ({ item }) => {
           <div className="p-4 flex flex-col h-full sm:p-6">
             <button
               className={clsx(
-                "bg-slate-900 text-white font-medium absolute right-0 px-4 py-1 mt-2",
+                "text-white font-medium absolute right-0 px-4 py-1 mt-2",
                 buttonColorClasses[randomButtonColorIndex]
               )}
             >
