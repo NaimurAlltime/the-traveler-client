@@ -1,4 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardBanner from "../pages/Dashboard/DashboardBanner/DashboardBanner";
+import AddedPackages from "../pages/Dashboard/DashboardPackages/AddedPackages";
+import DashboardPackages from "../pages/Dashboard/DashboardPackages/DashboardPackages";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "./../layouts/Dashboard";
@@ -59,6 +62,18 @@ const router = createBrowserRouter([
       //   path: "my-selected-classes",
       //   element: <MySelectedClasses></MySelectedClasses>,
       // },
+      {
+        path: "banner",
+        element: <DashboardBanner />,
+      },
+      {
+        path: "popular-packages",
+        element: <DashboardPackages />,
+      },
+      {
+        path: "added-package",
+        element: <AddedPackages />,
+      },
     ],
   },
 ]);
