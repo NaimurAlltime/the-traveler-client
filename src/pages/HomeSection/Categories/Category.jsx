@@ -2,7 +2,7 @@ import "./Category.css";
 const Category = ({ category }) => {
   const { category_name, image } = category;
   return (
-    <div className="lg:p-0 p-2">
+    <div className="lg:p-0 p-2 mx-2">
       {/* // <!-- Card --> */}
       <a className="group relative block" href="#">
         <div className="flex-shrink-0 relative rounded-md overflow-hidden w-full h-[200px] before:z-[1]">

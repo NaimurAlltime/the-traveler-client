@@ -18,5 +18,15 @@
     "id": 4,
     "category_name": "Wonders of Wall",
     "image": "https://img.freepik.com/premium-photo/beautiful-asian-woman-walking-great-wall-china-generative-ai_151355-20514.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
+  },
+  {
+    "id": 5,
+    "category_name": "The Kitiwake Dive",
+    "image": "https://img.freepik.com/premium-photo/egypt-red-sea-wreck-sunken-ship-scuba-diver_857279-12585.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
+  },
+  {
+    "id": 6,
+    "category_name": "Golfing in Cayman",
+    "image": "https://img.freepik.com/premium-photo/female-golf-player-playing-golf-professional-golf-course_34011-928.jpg?size=626&ext=jpg&ga=GA1.1.209329912.1680195530&semt=ais"
   }
 ]
