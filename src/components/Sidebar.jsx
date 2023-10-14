@@ -108,14 +108,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               {/* <!-- Menu Item Dashboard --> */}{" "}
               <li>
                 <NavLink
-                  to="/dashboard"
+                  to="/dashboard/admin-home"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-gray-300 duration-300 ease-in-out hover:bg-gray-900 dark:hover:bg-gray-900 ${
-                    pathname.includes("/dashboard-home") &&
+                    pathname.includes("/dashboard/admin-home") &&
                     "bg-gray-900 dark:bg-gray-500"
                   }`}
                 >
                   <AiOutlineHome className="text-lg" />
-                  Dashboard Home
+                  Admin Home
                 </NavLink>
               </li>
               {/* <!-- Menu Item Dashboard --> */}

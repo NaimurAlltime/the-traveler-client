@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "./../layouts/Dashboard";
 import Main from "./../layouts/Main";
+import AdminHome from "./../pages/Dashboard/AdminHome/AdminHome";
 import Home from "./../pages/HomeSection/Home/Home";
 
 // const router = createBrowserRouter([
@@ -58,10 +59,10 @@ const router = createBrowserRouter([
       // </PrivateRoute>
     ),
     children: [
-      // {
-      //   path: "my-selected-classes",
-      //   element: <MySelectedClasses></MySelectedClasses>,
-      // },
+      {
+        path: "admin-home",
+        element: <AdminHome />,
+      },
       {
         path: "banner",
         element: <DashboardBanner />,
