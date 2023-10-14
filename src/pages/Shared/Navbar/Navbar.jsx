@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-white drop-shadow-1 flex flex-wrap md:justify-start md:flex-nowrap w-full text-md">
+    <header className="sticky top-0 z-10 bg-white drop-shadow-md flex flex-wrap md:justify-start md:flex-nowrap w-full text-md">
       <nav
         className="max-w-screen-xl mx-auto  relative w-full bg-white md:flex md:items-center md:justify-between md:py-0 sm:p-2 lg:p-0 xl:mx-auto dark:bg-gray-800 dark:border-gray-700"
         aria-label="Global"
